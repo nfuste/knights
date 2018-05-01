@@ -103,7 +103,7 @@ func main() {
 	chatid := strconv.Itoa(record.Result[0].Message.Chat.ID)
 
 	// The Bot now sends a message to chatid
-	url = "https://api.telegram.org/bot" + token + "/sendMessage?chat_id=" + chatid + "&text='Message from SMTFirstBot for '" + record.Result[0].Message.Chat.Username
+	url = "https://api.telegram.org/bot" + token + "/sendMessage?chat_id=" + chatid + "&text=Hi there " + record.Result[0].Message.Chat.Username
 	nurl = fmt.Sprintf(url)
 
 	req, err = http.NewRequest("GET", nurl, nil)
